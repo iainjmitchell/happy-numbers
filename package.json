@@ -1,0 +1,23 @@
+{
+  "name": "happy-numbers",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --reporter nyan happyNumbers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iainjmitchell/happy-numbers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iainjmitchell/happy-numbers/issues"
+  },
+  "homepage": "https://github.com/iainjmitchell/happy-numbers",
+  "dependencies" :{
+    "mocha" : "*",
+    "chai" : "*"
+  }
+}
