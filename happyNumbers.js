@@ -41,10 +41,13 @@ var Mathematician = function(){
 	}
 
 	function convertToDigits(number){
-		return (""+number)
-			.split("")
-			.map(function(digit){
-				return parseInt(digit);
-			});
+		var digits = [];
+		var remaining = number;
+		while(remaining > 0){
+			var digit = remaining % 10;
+			var remaining = Math.floor(remaining / 10);
+			digits.push(digit);
+		}
+		return digits;
 	}
 }
