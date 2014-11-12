@@ -26,11 +26,7 @@ var Mathematician = function(){
 	var HAPPY_NUMBER = 1;
 
 	this.isHappyNumber = function(number){
-		var digits = (""+number)
-			.split("")
-			.map(function(digit){
-				return parseInt(digit);
-			});
+		var digits = convertToDigits(number);
 		return squareDigits(digits) === HAPPY_NUMBER;
 	};
 
@@ -42,5 +38,13 @@ var Mathematician = function(){
 		var tail = digits.slice(1);
 		var digitSquared = Math.pow(digit, 2);
 		return digitSquared + squareDigits(tail);
+	}
+
+	function convertToDigits(number){
+		return (""+number)
+			.split("")
+			.map(function(digit){
+				return parseInt(digit);
+			});
 	}
 }
