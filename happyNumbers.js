@@ -1,6 +1,6 @@
 require('chai').should();
 
-var HAPPY_NUMBERS = [1];
+var HAPPY_NUMBERS = [1, 7];
 
 HAPPY_NUMBERS.forEach(function(number){
 	describe(number, function(){
