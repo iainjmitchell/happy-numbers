@@ -23,8 +23,7 @@ NON_HAPPY_NUMBERS.forEach(function(number){
 });
 
 var Mathematician = function(){
-	var HAPPY_NUMBER = 1,
-		HAPPY_NUMBERS = [1, 10];
+	var HAPPY_NUMBER = 1;
 
 	this.isHappyNumber = function(number){
 		var digits = (""+number).split("");
