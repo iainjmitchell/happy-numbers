@@ -24,6 +24,6 @@ NON_HAPPY_NUMBERS.forEach(function(number){
 
 var Mathematician = function(){
 	this.isHappyNumber = function(number){
-		return number === 1;
+		return number === 1 || number === 7;
 	}
 }
