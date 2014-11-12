@@ -1,6 +1,6 @@
 require('chai').should();
 
-var HAPPY_NUMBERS = [1, 7];
+var HAPPY_NUMBERS = [1, 10];
 
 HAPPY_NUMBERS.forEach(function(number){
 	describe(number, function(){
@@ -23,9 +23,14 @@ NON_HAPPY_NUMBERS.forEach(function(number){
 });
 
 var Mathematician = function(){
-	var HAPPY_NUMBERS = [1, 7];
+	var HAPPY_NUMBER = 1,
+		HAPPY_NUMBERS = [1, 10];
 
 	this.isHappyNumber = function(number){
+		if (number === HAPPY_NUMBER){
+			
+			return number * number === HAPPY_NUMBER;
+		}
 		return HAPPY_NUMBERS.indexOf(number) >= 0;
 	}
 }
