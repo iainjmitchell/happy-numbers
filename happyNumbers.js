@@ -23,7 +23,9 @@ NON_HAPPY_NUMBERS.forEach(function(number){
 });
 
 var Mathematician = function(){
+	var HAPPY_NUMBERS = [1, 7];
+
 	this.isHappyNumber = function(number){
-		return number === 1 || number === 7;
+		return HAPPY_NUMBERS.indexOf(number) >= 0;
 	}
 }
