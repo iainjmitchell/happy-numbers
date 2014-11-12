@@ -31,8 +31,7 @@ var Mathematician = function(){
 			.map(function(digit){
 				return parseInt(digit);
 			});
-		var result = squareDigits(digits);
-		return result === HAPPY_NUMBER;
+		return squareDigits(digits) === HAPPY_NUMBER;
 	};
 
 	function squareDigits(digits){
