@@ -26,12 +26,20 @@ var Mathematician = function(){
 	var HAPPY_NUMBER = 1;
 
 	this.isHappyNumber = function(number){
-		var digits = (""+number).split("");
-		var result = 0;
-		digits.forEach(function(digit){
-			parseInt(digit);
-			result += digit * digit; 
+		var digits = (""+number).split("").map(function(digit){
+			return parseInt(digit);
 		});
+		var result = squareDigits(digits);
 		return result === HAPPY_NUMBER;
 	};
+
+	function squareDigits(digits){
+		if (digits.length === 0){
+			return 0;
+		}
+		var digit = digits[0];
+		var tail = digits.slice(1);
+		var digitSquared = Math.pow(digit, 2);
+		return digitSquared + squareDigits(tail);
+	}
 }
