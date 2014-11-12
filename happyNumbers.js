@@ -27,10 +27,12 @@ var Mathematician = function(){
 		HAPPY_NUMBERS = [1, 10];
 
 	this.isHappyNumber = function(number){
-		if (number === HAPPY_NUMBER){
-			
-			return number * number === HAPPY_NUMBER;
-		}
-		return HAPPY_NUMBERS.indexOf(number) >= 0;
-	}
+		var digits = (""+number).split("");
+		var result = 0;
+		digits.forEach(function(digit){
+			parseInt(digit);
+			result += digit * digit; 
+		});
+		return result === HAPPY_NUMBER;
+	};
 }
